@@ -21,7 +21,7 @@ pipeline {
          steps {
            step([$class: 'JacocoPublisher', 
                 execPattern: '**/build/jacoco/*.exec',
-                classPattern: '**/build/classes',}
+                classPattern: '**/build/classes'},
                 sourcePattern: 'src/main/java',
                 exclusionPattern: 'src/test*'
                 ])
